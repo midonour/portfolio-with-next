@@ -2,7 +2,7 @@ import "./globals.css";
 import ThemesProvider from "./Components/ThemesProvider";
 
 export const metadata = {
-  metadataBase: new URL("https://your-domain.vercel.app"),
+  metadataBase: new URL("https://mohamed-nour.vercel.app/"),
 
   title: {
     default: "Mohamed Nour | Frontend Developer",
@@ -43,7 +43,7 @@ export const metadata = {
     title: "Mohamed Nour | Frontend Developer",
     description:
       "Frontend Developer specializing in React, Next.js, and modern web technologies.",
-    url: "https://your-domain.vercel.app",
+    url: "https://mohamed-nour.vercel.app/",
     siteName: "Mohamed Nour Portfolio",
     images: [
       {
@@ -72,7 +72,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://your-domain.vercel.app",
+    canonical: "https://mohamed-nour.vercel.app/",
   },
 
   category: "technology",

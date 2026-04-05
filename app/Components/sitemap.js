@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://your-portfolio.vercel.app";
+  const baseUrl = "https://mohamed-nour.vercel.app/";
   return [
     {
       url: baseUrl,
