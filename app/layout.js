@@ -102,6 +102,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
           rel="stylesheet"
         />
+        <meta name="google-site-verification" content="j-lQKZViGho6bp7xoX4LBvUzcFl0ckFZUCMJR4TdTjY" />
       </head>
       <body className="min-h-full flex flex-col font-space-grotesk dark:bg-[#131318] ">
         <ThemesProvider>{children}</ThemesProvider>
