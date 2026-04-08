@@ -66,7 +66,7 @@ export default function ProjectCard({ image, title, description, live, github, d
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className={`px-4 py-2 text-[#0F172A] dark:text-[#E2E8F0] text-center rounded hover:bg-gray-700 transition ${disable ? "pointer-events-none opacity-50" : ""}`}
+            className={`px-4 py-2 text-[#0F172A] dark:text-[#E2E8F0] text-center rounded dark:hover:bg-gray-700 hover:bg-gray-200 transition ${disable ? "pointer-events-none opacity-50" : ""}`}
           >
             <FaCode className="inline-block mr-2" />
             GitHub
@@ -75,7 +75,7 @@ export default function ProjectCard({ image, title, description, live, github, d
             href={live}
             target="_blank"
             rel="noopener noreferrer"
-            className={`px-4 py-2 text-[#0F172A] dark:text-[#E2E8F0] text-center rounded hover:bg-blue-700 transition ${disable ? "pointer-events-none opacity-50" : ""}`}
+            className={`px-4 py-2 text-[#0F172A] dark:text-[#E2E8F0] text-center rounded hover:bg-gray-200 dark:hover:bg-blue-700 transition ${disable ? "pointer-events-none opacity-50" : ""}`}
           >
             <FaArrowUpRightFromSquare className="inline-block mr-2" />
             Live Demo

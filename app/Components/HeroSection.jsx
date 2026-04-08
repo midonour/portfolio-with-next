@@ -78,13 +78,13 @@ function HeroSection() {
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
           <a
             href="#Projects"
-            className="px-6 py-3 rounded-3xl font-medium text-white dark:text-black bg-gradient-to-r from-[#00696F] to-[#7000FF] hover:opacity-90 transition"
+            className="px-6 py-3 rounded-3xl font-medium text-white dark:text-black bg-gradient-to-r dark:from-[#00F2FF] from-[#00696F] to-[#7000FF] hover:opacity-80 transition"
           >
             View Projects
           </a>
           <a
             href="#Contact"
-            className="px-6 py-3 rounded-3xl font-medium border border-[#CBD5E1] dark:border-[#00F2FF] text-[#1E293B] dark:text-[#00F2FF] hover:bg-[#7000FF] dark:hover:bg-[#00F2FF] hover:text-white transition"
+            className="px-6 py-3 rounded-3xl font-medium border border-[#CBD5E1] dark:border-white text-[#1E293B] dark:text-white dark:hover:bg-white/10 hover:bg-gray-100  transition"
           >
             Contact Me
           </a>

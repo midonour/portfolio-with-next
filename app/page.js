@@ -5,6 +5,7 @@ import SkillsSections from "./Components/SkillsSections";
 import HeroSection from "./Components/HeroSection";
 import AboutSection from "./Components/AboutSection";
 import Footer from "./Components/Footer";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center font-space-grotesk">

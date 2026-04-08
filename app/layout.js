@@ -1,5 +1,6 @@
 import "./globals.css";
 import ThemesProvider from "./Components/ThemesProvider";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   metadataBase: new URL("https://mohamed-nour.vercel.app/"),
@@ -106,6 +107,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="min-h-full flex flex-col font-space-grotesk dark:bg-[#131318] ">
         <ThemesProvider>{children}</ThemesProvider>
+        <Toaster position="top-center" />
       </body>
     </html>
   );
