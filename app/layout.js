@@ -11,13 +11,14 @@ export const metadata = {
   },
 
   description:
-    "Mohamed Nour is a Frontend Developer specializing in React, Next.js, and modern web technologies.",
+    "Mohamed Nour is a junior Frontend Developer specializing in React, Next.js, and modern web technologies.",
 
   keywords: [
     "Mohamed Nour",
     "Frontend Developer",
     "React Developer",
-    "Next.js Developer",
+    "junior Frontend Developer",
+    "Nextjs Developer",
     "Web Developer",
     "Portfolio",
   ],
