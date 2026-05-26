@@ -3,7 +3,7 @@ import ThemesProvider from "./Components/ThemesProvider";
 import { Toaster } from "react-hot-toast";
 
 export const metadata = {
-  metadataBase: new URL("https://www.mohamednour-dev.me/"),
+  metadataBase: new URL("https://mohamednour-dev.me/"),
 
   title: {
     default: "Mohamed Nour | Frontend Developer",
@@ -45,7 +45,7 @@ export const metadata = {
     title: "Mohamed Nour | Frontend Developer",
     description:
       "Frontend Developer specializing in React, Next.js, and modern web technologies.",
-    url: "https://www.mohamednour-dev.me/",
+    url: "https://mohamednour-dev.me/",
     siteName: "Mohamed Nour Portfolio",
     images: [
       {
@@ -74,7 +74,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.mohamednour-dev.me/",
+    canonical: "https://mohamednour-dev.me/",
   },
 
   category: "technology",
