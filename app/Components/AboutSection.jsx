@@ -1,47 +1,8 @@
-// "use client";
-// import Image from "next/image";
-// import { motion } from "framer-motion";
-// function AboutSection() {
-//   return (
-//     <motion.section
-//       initial={{ opacity: 0, scale: 0 }}
-//       whileInView={{ opacity: 1, scale: 1 }}
-//       transition={{ duration: 1 }}
-//       className="flex md:flex-row flex-col gap-10 pl-8 w-full h-screen font-space-grotesk"
-//     >
-//       <div className="about-image pr-5 pb-5 h-fit rounded-2xl border border-[#7000FF]/30">
-//         <Image
-//           src="/IMG-20231106-WA0018.webp"
-//           alt="About Image"
-//           width={500}
-//           height={300}
-//           className="rounded-xl"
-//           priority
-//         />
-//       </div>
-//       <div className="w-full md:mt-15 sm:w-1/2">
-//         <h2 className="dark:text-white text-[#7000FF] text-3xl capitalize">
-//           who am i ?
-//         </h2>
-//         <p className="dark:text-gray-300 text-[#475569] text-md md:leading-relaxed md:text-2xl  mt-4">
-//           I am a fourth-year student in the Information Technology program at
-//           the Faculty of Science, Minia University, and a passionate junior
-//           frontend developer with experience in building web applications using
-//           modern technologies. I enjoy learning new programming languages and
-//           frameworks, and I am always looking for opportunities to grow my
-//           skills and contribute to exciting projects.
-//         </p>
-//       </div>
-//     </motion.section>
-//   );
-// }
-
-// export default AboutSection;
-
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import { FaReact } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 function AboutSection() {
   return (
     <motion.section
@@ -53,19 +14,30 @@ function AboutSection() {
       viewport={{ once: true }}
     >
       {/* Image */}
-      <div className="about-image pr-5 pb-5 h-fit rounded-2xl border border-[#7000FF]/30">
+      <motion.div
+        className="about-image w-17 h-17 rounded-[50%] border-4 border-[#7000FF]/30 relative top-10 right-25 md:-top-65 md:left-40"
+        animate={{ y: ["0", "20px", "0"] }}
+        transition={{ duration: 2, ease: "easeOut", repeat: Infinity }}
+      >
+        <SiNextdotjs className="text-black dark:text-white w-full h-full" />
+      </motion.div>
+      <motion.div
+        className="about-image h-fit rounded-[50%] border-5 border-[#7000FF]/30"
+        animate={{ y: ["0", "20px", "0"] }}
+        transition={{ duration: 2, ease: "easeOut", repeat: Infinity }}
+      >
         <Image
           src="/IMG-20231106-WA0018.webp"
           alt="About Image"
           width={500}
           height={300}
-          className="rounded-xl object-cover"
+          className="rounded-[50%] object-cover "
           priority
           sizes="(max-width: 768px) 100vw, 50vw"
           placeholder="blur"
           blurDataURL="/IMG-20231106-WA0018-small.webp"
         />
-      </div>
+      </motion.div>
 
       {/* Text */}
       <div className="w-full md:w-1/2">
