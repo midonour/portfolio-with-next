@@ -1,127 +1,109 @@
+
+
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import toast from "react-hot-toast";
-import emailjs from "@emailjs/browser";
+import { FiMail, FiCode, FiShare2 } from "react-icons/fi";
+
+const EMAIL = "mohamedhhnour@gmail.com";
+const GITHUB = "https://github.com/midonour";
+const LINKEDIN = "https://www.linkedin.com/in/mohamed-nour-2996102a7/";
+
+const channels = [
+  {
+    label: "GitHub",
+    href: GITHUB,
+    icon: FiCode,
+    color: "text-[#0891B2] dark:text-[#00F2FF]",
+  },
+  {
+    label: "LinkedIn",
+    href: LINKEDIN,
+    icon: FiShare2,
+    color: "text-[#6D28D9] dark:text-[#C4B5FD]",
+  },
+  {
+    label: EMAIL,
+    href: `mailto:${EMAIL}`,
+    icon: FiMail,
+    color: "text-[#047857] dark:text-[#34D399]",
+  },
+];
 
 function ContactSection() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  function handleSubmit(e) {
-    e.preventDefault();
-    try {
-      if (!name || !email || !message) {
-        toast.error("Please fill in all fields.");
-        return;
-      }
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        toast.error("Please enter a valid email address.");
-        return;
-      }
-      const params = {
-        name,
-        email,
-        message,
-      };
-      emailjs
-        .send(
-          "service_iuufj3s",
-          "template_rfg3hbi",
-          params,
-          "qBPGm0sdOLrFBOm0-",
-        )
-        .then(
-          (response) => {
-            toast.success(`${response.text} .... ${response.status}`);
-          },
-          (error) => {
-            toast.error("Failed to send message.");
-          },
-        );
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch (error) {
-      toast.error(`An error occurred, ${error.message}`);
-    }
-  }
   return (
     <motion.section
       id="Contact"
-      className="py-20 w-full flex flex-col items-center font-space-grotesk"
-      initial={{ opacity: 0, scale: 0 }}
+      className="w-full px-4 py-14 font-space-grotesk sm:px-6 md:py-16 lg:px-10"
+      initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-      <span className="text-sm text-[#7000FF] dark:text-gray-400">Connect</span>
-      <h2 className="text-3xl md:text-4xl font-bold mt-2 text-[#0F172A] dark:text-white mb-6">
-        Get in Touch
-      </h2>
-      <span className="text-[#475569] dark:text-gray-300">
-        Have a project in mind? Let's discuss!
-      </span>
+      <div className="mx-auto flex max-w-5xl flex-col items-center rounded-3xl border border-[#E2E8F0] bg-white px-5 py-10 text-center shadow-lg shadow-slate-200/60 dark:border-white/10 dark:bg-[#101218] dark:shadow-none sm:px-10 sm:py-14 lg:px-16">
+        {/* Badge */}
+        <span className="flex items-center gap-2 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] px-3.5 py-1.5 font-mono text-xs uppercase text-[#0891B2] dark:border-white/10 dark:bg-white/[0.04] dark:text-[#00F2FF]">
+          <span className="h-2 w-2 rounded-full bg-[#34D399]" />
+          <span className="text-[#94A3B8] dark:text-[#64748B]">{'//'}</span> 05.
+          Get_In_Touch
+        </span>
 
-      <div className="mt-8 flex justify-center w-full">
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col w-[95%] xl:w-[50%] border rounded-2xl p-6 bg-white/20 dark:bg-[#1B1B20]/20 border-[#E2E8F0] dark:border-[rgba(27,27,32,0.5)] shadow-md dark:shadow-none"
-        >
-          <div className="flex flex-col md:flex-row gap-4 mb-4">
-            <div className="flex flex-col flex-1 gap-2">
-              <label htmlFor="name" className="ml-3 text-[#64748B]">
-                Your Identity
-              </label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Full Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="px-4 py-2 rounded-3xl border border-[#E2E8F0] dark:border-[rgba(58,73,75,0.2)] dark:bg-[#1B1B20] bg-[#F8FAFC] dark:text-[#475569] text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div className="flex flex-col flex-1 gap-2">
-              <label htmlFor="email" className="ml-3 text-[#64748B]">
-                Your Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Email Address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="px-4 py-2 rounded-3xl border border-[#E2E8F0] dark:border-[rgba(58,73,75,0.2)] dark:bg-[#1B1B20] bg-[#F8FAFC] dark:text-[#475569] text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-          </div>
+        {/* Heading */}
+        <h2 className="mt-5 max-w-3xl text-3xl font-bold leading-[1.15] tracking-tight text-[#0F172A] dark:text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          Let&apos;s build something{" "}
+          <span className="bg-gradient-to-r from-[#0891B2] to-[#3A5EED] bg-clip-text text-transparent dark:from-[#00F2FF] dark:to-[#BFDBFE]">
+            together.
+          </span>
+        </h2>
 
-          <div className="flex flex-col mb-4">
-            <label htmlFor="message" className="ml-3 text-[#64748B] mb-1">
-              Message
-            </label>
-            <textarea
-              id="message"
-              rows={6}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="Tell me about your mission..."
-              className="px-4 py-3 rounded-3xl border border-[#E2E8F0] dark:border-[rgba(58,73,75,0.2)] dark:bg-[#1B1B20] bg-[#F8FAFC] dark:text-[#475569] text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+        {/* Description */}
+        <p className="mt-5 max-w-2xl font-inter text-sm leading-relaxed text-[#475569] dark:text-[#CBD5E1] sm:text-base md:text-lg">
+          I&apos;m currently open to frontend opportunities, internships,
+          freelance projects, and collaborations.
+        </p>
 
-          <button
-            type="submit"
-            className="w-full py-3 mt-2 rounded-3xl text-white dark:text-[#002022] text-lg bg-gradient-to-r from-[#00696F] to-[#7000FF] dark:from-[#00F2FF] transition-colors hover:opacity-90"
+        {/* Buttons */}
+        <div className="mt-8 flex w-full max-w-md flex-col items-center gap-3 sm:max-w-none sm:flex-row sm:justify-center">
+          <a
+            href={`mailto:${EMAIL}`}
+            target="_blank"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0891B2] px-6 py-3 text-sm font-medium text-white transition hover:opacity-85 dark:bg-[#00F2FF] dark:text-black sm:w-auto sm:text-base"
           >
-            Send Message
-          </button>
-        </form>
-      </div>
+            <FiMail size={18} />
+            Send Me an Email
+          </a>
+          <a
+            href={LINKEDIN}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#CBD5E1] px-6 py-3 text-sm font-medium text-[#1E293B] transition hover:bg-[#0891B2]/10 dark:border-white/15 dark:bg-white/5 dark:text-white sm:w-auto sm:text-base"
+          >
+            <FiShare2 size={18} className="text-[#6D28D9] dark:text-[#C4B5FD]" />
+            Connect on LinkedIn
+          </a>
+        </div>
 
-      <div className="w-full mt-20 h-px bg-gradient-to-r from-transparent via-[#00F2FF]/40 to-transparent" />
+        <hr className="mt-10 w-full border-[#E2E8F0] dark:border-white/10 sm:mt-12" />
+
+        {/* Direct channels */}
+        <p className="mt-8 font-mono text-xs uppercase tracking-[0.25em] text-[#64748B]">
+          Direct Channels
+        </p>
+
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+          {channels.map(({ label, href, icon: Icon, color }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 font-mono text-xs text-[#334155] transition hover:border-[#0891B2]/40 dark:border-white/10 dark:bg-white/3 dark:text-[#E2E8F0] dark:hover:border-[#00F2FF]/30 sm:text-sm"
+            >
+              <Icon size={16} className={color} />
+              {label}
+            </a>
+          ))}
+        </div>
+      </div>
     </motion.section>
   );
 }

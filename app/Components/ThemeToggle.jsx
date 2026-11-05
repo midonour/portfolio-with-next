@@ -12,7 +12,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="dark:text-[#00F2FF]  text-[#334155] absolute right-19 text-2xl  transition-colors"
+      className="dark:text-[#00F2FF]  text-[#334155]  text-2xl  transition-colors"
       aria-label="Theme toggle"
     >
       {theme === "dark" ? <FaSun /> : <FaMoon />}

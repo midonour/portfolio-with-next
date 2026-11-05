@@ -11,7 +11,7 @@ export const metadata = {
   },
 
   description:
-    "Mohamed Nour is a junior Frontend Developer specializing in React, Next.js, and modern web technologies.",
+    "Mohamed Nour is a junior Frontend Developer specializing in building modern UIs,responsive designs, Api integrations using React, Next.js, and modern web technologies.",
 
   keywords: [
     "Mohamed Nour",
@@ -20,6 +20,8 @@ export const metadata = {
     "junior Frontend Developer",
     "Nextjs Developer",
     "Web Developer",
+    "React",
+    "Next.js",
     "Portfolio",
   ],
 
@@ -106,7 +108,7 @@ export default function RootLayout({ children }) {
         />
         <meta name="google-site-verification" content="j-lQKZViGho6bp7xoX4LBvUzcFl0ckFZUCMJR4TdTjY" />
       </head>
-      <body className="min-h-full flex flex-col font-space-grotesk dark:bg-[#131318] ">
+      <body className="min-h-full flex flex-col font-space-grotesk dark:bg-[#0E0F14]">
         <ThemesProvider>{children}</ThemesProvider>
         <Toaster position="top-center" />
       </body>

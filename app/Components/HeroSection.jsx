@@ -1,92 +1,73 @@
-// "use client";
-// import { motion } from "framer-motion";
-// function HeroSection() {
-//   return (
-//     <motion.section
-//       className="w-full h-screen flex justify-center font-space-grotesk"
-//       id="Home"
-//       initial={{ opacity: 0, scale: 0 }}
-//       whileInView={{ opacity: 1, scale: 1 }}
-//       transition={{ duration: 1 }}
-//     >
-//       <div className="container mx-auto px-4 py-20 text-center flex flex-col items-center justify-center">
-//         <span className="text-lg dark:text-[#FFF] text-[#7000FF]">
-//           Welcom in my portfolio
-//         </span>
-//         <h1 className="md:text-6xl text-4xl font-bold mt-4 w-fit dark:text-[#00F2FF] text-[#0F172A] dark:drop-shadow-[0px_0px_8px_rgba(0,242,255,0.8)]">
-//           MOHAMED NOUR
-//         </h1>
-//         <span className="md:text-3xl text-2xl mt-4 dark:text-[#FFF] text-[#0F172A]">
-//           Frontend Developer
-//         </span>
-//         <p className="text-md mt-6 dark:text-[#94A3B8] text-[#475569] max-w-2xl mx-auto font-space-grotesk">
-//           Frontend developer specialized in building fast, accessible web
-//           applications with React and Next.js, with a strong focus on
-//           performance and clean UI architecture.
-//         </p>
-//         <div className="mt-8 flex justify-center gap-6">
-//           <a
-//             href="#Projects"
-//             className="px-6 py-3 bg-linear-to-r from-[#00696F] dark:from-[#00F2FF] from-0%  to-[#7000FF] to-100%   dark:text-black text-white rounded-3xl font-medium  hover:from-[#7000FF] hover:to-[#7000FF] transition-colors"
-//           >
-//             View Projects
-//           </a>
-//           <a
-//             href="#Contact"
-//             className="px-6 py-3 border dark:border-[#00F2FF] border-[#CBD5E1] dark:text-[#00F2FF] text-[#1E293B] rounded-3xl font-medium hover:bg-[#7000FF] dark:hover:bg-[#00F2FF] hover:text-white transition-colors"
-//           >
-//             Contact Me
-//           </a>
-//         </div>
-//       </div>
-//     </motion.section>
-//   );
-// }
-
-// export default HeroSection;
 "use client";
 import { motion } from "framer-motion";
+import { FaFolderOpen, FaDownload } from "react-icons/fa";
 
 function HeroSection() {
   return (
     <motion.section
       id="Home"
-      className="w-full h-screen flex justify-center items-center font-space-grotesk"
-      initial={{ opacity: 0, scale: 0 }}
+      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden px-4 py-20 font-space-grotesk"
+      initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <div className="container mx-auto px-4 text-center flex flex-col items-center justify-center">
-        <span className="text-lg text-[#7000FF] dark:text-white">
-          Welcome to my portfolio
+      {/* soft glow behind heading */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-[300px] w-[90vw] max-w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#00F2FF]/10 blur-3xl dark:block" />
+
+      <div className="container mx-auto flex flex-col items-center justify-center text-center">
+        {/* Badge */}
+        <span className="flex items-center gap-2 rounded-full border border-[#A7F3D0] bg-[#ECFDF5] px-3 py-1.5 font-mono text-xs text-[#047857] dark:border-white/10 dark:bg-white/[0.04] dark:text-[#E2E8F0] sm:px-4 sm:text-sm">
+          <span className="h-2 w-2 shrink-0 rounded-full bg-[#34D399]" />
+          Available for Frontend Opportunities
         </span>
 
-        <h1 className="text-4xl md:text-6xl font-bold mt-4 w-fit text-[#0F172A] dark:text-[#00F2FF]">
-          MOHAMED NOUR
+        {/* Eyebrow */}
+        <span className="mt-5 font-mono text-xs font-bold uppercase tracking-widest text-[#0891B2] dark:text-[#00F2FF] sm:text-sm">
+          <span className="font-normal text-[#94A3B8] dark:text-[#64748B]">// </span>
+          Mohamed Nour • Frontend Developer
+        </span>
+
+        {/* Heading */}
+        <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-[1.1] tracking-tight text-[#0F172A] dark:text-[#F5F2F0] sm:text-5xl md:text-6xl lg:text-7xl">
+          Building{" "}
+          <span className="bg-gradient-to-r from-[#0891B2] to-[#3A5EED] bg-clip-text text-transparent dark:from-[#A5F3FC] dark:to-[#D1BCFF]">
+            modern web
+          </span>{" "}
+          <br className="hidden sm:block" />
+          <span className="bg-gradient-to-r from-[#0891B2] to-[#0891B2] bg-clip-text text-transparent dark:from-[#00F2FF] dark:to-[#A5F3FC]">
+            experiences
+          </span>{" "}
+          with code.
         </h1>
 
-        <span className="mt-4 text-2xl md:text-3xl text-[#0F172A] dark:text-white">
-          Frontend Developer
-        </span>
-
-        <p className="mt-6 text-md dark:text-[#94A3B8] text-[#475569] max-w-2xl mx-auto">
-          Frontend developer specialized in building fast, accessible web
-          applications with React and Next.js, focusing on performance and clean UI architecture.
+        {/* Description */}
+        <p className="mx-auto mt-6 max-w-2xl font-inter text-sm leading-relaxed text-[#475569] dark:text-[#CBD5E1] sm:text-base md:text-lg">
+          Junior Frontend Developer focused on{" "}
+          <span className="font-semibold text-[#0F172A] dark:text-white">JavaScript</span>,{" "}
+          <span className="font-semibold text-[#0F172A] dark:text-white">React</span>, and{" "}
+          <span className="font-semibold text-[#0F172A] dark:text-white">Next.js</span>. I build
+          responsive, scalable, and user-friendly web applications.
         </p>
 
-        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+        {/* Buttons */}
+        <div className="mt-8 flex w-full max-w-md flex-col items-center gap-3 sm:max-w-none sm:flex-row sm:justify-center">
           <a
-            href="#Projects"
-            className="px-6 py-3 rounded-3xl font-medium text-white dark:text-black bg-gradient-to-r dark:from-[#00F2FF] from-[#00696F] to-[#7000FF] hover:opacity-80 transition"
+            href="https://github.com/midonour"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0891B2] px-6 py-3 text-base font-medium text-white transition hover:opacity-80 dark:bg-[#00F2FF] dark:text-black sm:w-auto"
           >
-            View Projects
+            <FaFolderOpen />
+            View My Projects
           </a>
           <a
-            href="#Contact"
-            className="px-6 py-3 rounded-3xl font-medium border border-[#CBD5E1] dark:border-white text-[#1E293B] dark:text-white dark:hover:bg-white/10 hover:bg-gray-100  transition"
+            href="https://drive.google.com/uc?export=download&id=16DeooN2MI-5sfMabe7reDzA8WwRDqngh"
+            rel="noopener noreferrer"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#CBD5E1] px-6 py-3 text-base font-medium text-[#1E293B] transition hover:bg-gray-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:bg-[#0891B2]/10 sm:w-auto"
           >
-            Contact Me
+            <FaDownload />
+            Download CV
           </a>
         </div>
       </div>

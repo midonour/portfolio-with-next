@@ -1,65 +1,33 @@
 "use client";
 import SkillsCards from "./SkillsCards";
 import { motion } from "framer-motion";
-import {
-  FaReact,
-  FaHtml5,
-  FaCss3Alt,
-  FaGit,
-  FaGithub,
-  FaJs,
-} from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
-
-const tech = [
-  { icon: <FaReact />, name: "React" },
-  { icon: <FaHtml5 />, name: "HTML5" },
-  { icon: <FaCss3Alt />, name: "CSS3" },
-  { icon: <FaGit />, name: "Git" },
-  { icon: <FaGithub />, name: "GitHub" },
-  { icon: <FaJs />, name: "JavaScript" },
-  { icon: <SiNextdotjs />, name: "Nextjs" },
-  { icon: <SiTailwindcss />, name: "TailwindCSS" },
-];
 
 function SkillsSections() {
   return (
     <motion.section
       id="Skills"
-      className="relative text-white w-full my-8 flex flex-col justify-center items-center font-space-grotesk"
+      className="relative w-full px-4 py-16 font-space-grotesk sm:px-8 md:py-20 lg:px-12"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <span className="dark:text-white text-black">TECHNICAL ARSENAL</span>
-      <h2 className="text-3xl font-bold mb-8 dark:text-white text-black">
-        Core Competencies
-      </h2>
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 text-center">
+        <span className="rounded-md border border-[#E2E8F0] bg-white px-3 py-1.5 font-mono text-xs uppercase text-[#0891B2] dark:border-white/10 dark:bg-white/4 dark:text-[#00F2FF]">
+          <span className="text-[#94A3B8] dark:text-[#64748B]">{'//'}</span> 02. Tech_Stack
+        </span>
 
-      <div className="relative flex overflow-hidden w-[90%] py-4 gap-4">
-        {/* Left & Right fade overlays */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-22 bg-linear-to-r dark:from-[#131318] to-transparent"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-22 bg-linear-to-l dark:from-[#131318] to-transparent"></div>
+        <h2 className="text-3xl font-bold text-[#0F172A] dark:text-white sm:text-4xl lg:text-6xl">
+          Tech Stack
+        </h2>
 
-        {/* Motion container */}
-        <motion.div
-          className="flex gap-4 shrink-0"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            duration: 20,
-            ease: "linear",
-            repeat: Infinity,
-          }}
-        >
-          {tech.map((skill, index) => (
-            <SkillsCards key={index} icon={skill.icon} name={skill.name} />
-          ))}
-          {/* Duplicate for seamless scroll */}
-          {tech.map((skill, index) => (
-            <SkillsCards key={`dup-${index}`} icon={skill.icon} name={skill.name} />
-          ))}
-        </motion.div>
+        <p className="max-w-xl text-sm text-[#475569] dark:text-[#CBD5E1] sm:text-base lg:text-lg">
+          Tools and technologies I use to build modern web applications.
+        </p>
+
+        <div className="mt-8 w-full text-left sm:mt-10">
+          <SkillsCards />
+        </div>
       </div>
     </motion.section>
   );
