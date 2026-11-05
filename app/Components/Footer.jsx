@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { FiMail, FiCode, FiShare2 } from "react-icons/fi";
 

@@ -1,4 +1,4 @@
-
+"use client";
 import { image } from "motion/react-client";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";

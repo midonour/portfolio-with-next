@@ -1,5 +1,3 @@
-
-
 "use client";
 import { motion } from "framer-motion";
 import { FiMail, FiCode, FiShare2 } from "react-icons/fi";
