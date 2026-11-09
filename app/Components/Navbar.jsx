@@ -72,10 +72,10 @@ export default function Navbar() {
         {/* logo */}
         <div className="flex justify-center items-center gap-2">
           <span className="w-2 h-2 bg-[#34D399] rounded-full block"></span>
-          <span className="text-sm md:text-xl text-[#0F172A] dark:text-white">
+          <span className="text-xs md:text-xl text-[#0F172A] dark:text-white">
             Mohamed Nour
           </span>
-          <span className="text-xs md:bg-[#00F2FF]/10 md:border text-[#0891B2] dark:text-[#00F2FF] text-center md:border-[#00F2FF]/20 mt-1 py-1 md:px-4 rounded-2xl">
+          <span className="text-xs md:bg-[#00F2FF]/10 md:border text-[#0891B2] dark:text-[#00F2FF] text-center md:border-[#00F2FF]/20 py-1 md:px-4 rounded-2xl">
             .dev
           </span>
         </div>
@@ -109,7 +109,7 @@ export default function Navbar() {
           >
             <FiFileText /> Resume
           </a>
-          <button className="flex items-center gap-1.5 text-md justify-center bg-[#0891B2] dark:bg-[#00F2FF] text-white dark:text-black rounded-3xl hover:bg-[#0891B2]/99  cursor-pointer px-4 py-1">
+          <button className="flex items-center gap-1.5 text-sm justify-center bg-[#0891B2] dark:bg-[#00F2FF] text-white dark:text-black rounded-3xl hover:bg-[#0891B2]/99  cursor-pointer px-4 py-1">
             <MdMessage className="mt-0.5" size={15} /> Let's Talk
           </button>
 
@@ -125,17 +125,17 @@ export default function Navbar() {
         </div>
         {/* breadCrumb */}
         <div className="sm:hidden flex justify-between items-center gap-4">
-          <button className="flex items-center gap-1.5 text-md justify-center bg-[#0891B2] dark:bg-[#00F2FF] text-white dark:text-black rounded-3xl hover:bg-[#0891B2]/99 px-3 py-1 cursor-pointer">
+          <button className="flex items-center text-sm justify-center bg-[#0891B2] dark:bg-[#00F2FF] text-white dark:text-black rounded-3xl hover:bg-[#0891B2]/99 px-3 py-1 cursor-pointer">
             <MdMessage className="mt-0.5" size={15} /> Let's Talk
           </button>
 
           
           <button
-            className="md:hidden w-9 h-9 border border-white/10 bg-white/4 text-[#334155]  dark:text-[#00F2FF] rounded-full hover:bg-[#0891B2]/10 cursor-pointer flex justify-center items-center"
+            className="md:hidden w-7 h-7 border border-white/10 bg-white/4 text-[#334155]  dark:text-[#00F2FF] rounded-full hover:bg-[#0891B2]/10 cursor-pointer flex justify-center items-center"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={20} className="text-[#CBD5E1]"/>}
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={10} className="text-[#CBD5E1]"/>}
           </button>
         </div>
       </motion.nav>
