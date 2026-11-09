@@ -100,7 +100,7 @@ export default function Navbar() {
         </div>
 
         {/* actions */}
-        <div className=" hidden md:flex justify-between items-center gap-4">
+        <div className=" hidden md:flex justify-between items-center gap-2">
           <a
             href="https://drive.google.com/file/d/16DeooN2MI-5sfMabe7reDzA8WwRDqngh/view?usp=sharing"
             target="_blank"
@@ -131,11 +131,11 @@ export default function Navbar() {
 
           
           <button
-            className="md:hidden w-7 h-7 border border-white/10 bg-white/4 text-[#334155]  dark:text-[#00F2FF] rounded-full hover:bg-[#0891B2]/10 cursor-pointer flex justify-center items-center"
+            className="md:hidden w-8 h-8 border border-white/10 bg-white/4 text-[#334155]  dark:text-[#00F2FF] rounded-full hover:bg-[#0891B2]/10 cursor-pointer flex justify-center items-center"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={10} className="text-[#CBD5E1]"/>}
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={20} className="text-[#CBD5E1]"/>}
           </button>
         </div>
       </motion.nav>
